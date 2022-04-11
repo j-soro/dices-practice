@@ -1,7 +1,15 @@
 body {
   background-color: rgb(53 79 151);
+}
+
+.main-container {
+  padding: 2px;
+  width: auto;
+  height: auto;
+  background-color: rgb(53 79 151);
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
 }
 
@@ -19,7 +27,6 @@ h2 {
 
 .dice-container {
   margin-top: 100px;
-  position: absolute;
   background-color: rgb(95 171 201);
   width: 500px;
   height: 500px;
