@@ -1,18 +1,24 @@
-
-const dataArray = [];
+const dice = document.getElementById("dice");
+const diceHistory = document.getElementById("diceHistory");
+const btnRoll = document.getElementById("btn-roll");
+const btnClear = document.getElementById("btn-clear");
+let dataArray = [];
 
 function diceThrow() {
-  const roll = Math.floor(Math.random() * 6) + 1;
-  dataArray.push(roll);
-  return roll;
+  const diceNumber = Math.floor(Math.random() * 6) + 1;
+  dataArray.push(diceNumber);
+  return diceNumber;
 }
 
-function changeDice() {
-  const dice = document.getElementById("dice");
-  dice.textContent = diceThrow().toString();
+function renderDice() {
+  dice.textContent = diceThrow();
+  diceHistory.textContent += dataArray.pop() + ", ";
 }
 
-const btn = document.getElementById("btn");
-btn.addEventListener("click", changeDice);
+function clearHistory() {
+  dataArray = [];
+  diceHistory.textContent = "";
+}
 
-console.log(diceThrow(4));
+btnRoll.addEventListener("click", renderDice);
+btnClear.addEventListener("click", clearHistory);
