@@ -1,0 +1,1 @@
+.dice-container{position:absolute;width:500px;height:500px;border:1px solid red;left:200px;top:200px;display:flex;justify-content:center;align-items:center;flex-flow:column}.dice{height:120px;width:120px;border:1px solid black}
